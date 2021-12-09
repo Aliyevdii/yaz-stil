@@ -11,19 +11,19 @@ async def start(c, m):
     owner_username = owner.username if owner.username else 'Ns_bot_updates'
 
     # start text
-    text = f"""Hey! {m.from_user.mention(style='md')},
+    text = f"""Salam! {m.from_user.mention(style='md')},
 
-💡 ** I am Stylish Font Bot**
+💡 ** Mən Qəşəng Şrift Botuyam**
 
-`I can help you to get stylish fonts. Just send me some text and see magic.`
+ Qəşəng şriftlər əldə etməkdə sizə kömək edə bilərəm. Sadəcə mənə bir az mətn göndər və sehr gör.
 
-**👲 Maintained By:** {owner.mention(style='md')}
+**👲 𝙾𝚠𝚗𝚎𝚛:** {owner.mention(style='md')}
 """
 
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}")
+            InlineKeyboardButton('𝙾𝚠𝚗𝚎𝚛 👨‍✈️', url=f"https://t.me/{owner_username}")
         ]
     ]
     await m.reply_text(
@@ -64,7 +64,7 @@ async def style_buttons(c, m, cb=False):
         InlineKeyboardButton('H̆̈ă̈p̆̈p̆̈y̆̈', callback_data='style+happy'),
         InlineKeyboardButton('S̑̈ȃ̈d̑̈', callback_data='style+sad'),
         ],[
-        InlineKeyboardButton('Next ➡️', callback_data="nxt")
+        InlineKeyboardButton(İrəli ➡️', callback_data="nxt")
     ]]
     if not cb:
         await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
@@ -101,7 +101,7 @@ async def nxt(c, m):
             InlineKeyboardButton('S̶t̶r̶i̶k̶e̶', callback_data='style+strike'),
             InlineKeyboardButton('F༙r༙o༙z༙e༙n༙', callback_data='style+frozen')
             ],[
-            InlineKeyboardButton('⬅️ Back', callback_data='nxt+0')
+            InlineKeyboardButton('⬅️ Geri', callback_data='nxt+0')
         ]]
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
